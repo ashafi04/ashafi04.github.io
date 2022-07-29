@@ -1,0 +1,17 @@
+
+@media screen 
+{
+    body{
+        background-color: red;}
+}
+
+@media screen and (min-width: 1081px)
+{
+    body{
+        background-color: blue;}
+}
+
+@media screen and (min-width: 720px) and (max-width: 1080px){
+    body{
+        background-color: green;}
+}

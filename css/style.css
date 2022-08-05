@@ -132,6 +132,7 @@ footer
         margin:0;
         perspective: 200em;
     }
+    .card{width:100%;}
     .Main{width:100%;order:1;}
 }
 

@@ -67,7 +67,7 @@ body{
     transform: rotateY(180deg);
 }
 
-/*Card Front*/
+/*While card Front if facing up,display front*/
 .card > .Front 
 {
     display: flex;
@@ -77,10 +77,7 @@ body{
 }
 .card>.Back{height: 0%;}
 
-.Main
-{
-    width:66vw;
-}
+.Main{width:66vw;}
 
 h2{text-align: center;}
 
@@ -100,7 +97,7 @@ h2{text-align: center;}
 .NavItem > a:hover{text-decoration: underline;}
 
 /*Grow main title bigger than other items in the container*/
-.NavBar > .NavItemTitle{flex-grow: 13;}
+.NavBar > .NavItemTitle{flex-grow: 15;}
 
 footer
 {
@@ -125,10 +122,17 @@ footer
     body
     {
         background-color: blue;
-        font-size: 0.6em;
+        font-size: 0.7em;
     }
-    .Left-Column{display: none;}
-    .Main{width:100%;}
+    /*Delete Card/Left column*/
+    .Left-Column
+    {
+        width: 100%;
+        order:2;
+        margin:0;
+        perspective: 200em;
+    }
+    .Main{width:100%;order:1;}
 }
 
 /*Tablet*/

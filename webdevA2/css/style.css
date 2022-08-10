@@ -1,0 +1,315 @@
+body{
+    /*background animation*/
+    background: linear-gradient(-45deg, #F2EEE3, #E9D1D0, #FAE0BA, #EB8C73, #F0DED1, #DEC4A7);
+    background-size: 500% 500%;
+    animation: BackgroundAnimation 10s infinite;
+
+    margin:0;
+    height:100%;
+    font-family: Helvetica;
+}
+@keyframes BackgroundAnimation {
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+
+.Content
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin:2% 1% 2% 1%;
+    height:100%;
+}
+
+/*Left Column styling(card)-----------------------------------------*/
+.Left-Column
+{
+    margin-right: 3%;
+    perspective:80em;
+}
+
+.card
+{
+    width:27vw;
+    background-color: #d1b1b0;
+    margin-right: 3%;
+    text-align:center; 
+    height:100%;
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor:pointer;
+    border:0.15em solid brown;
+    border-radius: 0.5em;
+}
+
+/*Applies to both card Faces*/
+.card > div
+{
+    /*Allows the back of each card face to remain hidden*/
+    backface-visibility: hidden; 
+    overflow: hidden;
+}
+
+/*Stlying for when back of card is shown*/
+.card.is-flipped{transform: rotateY(180deg);}
+/*Make height = 0 so that .Back class becomes full height of the card*/
+.card.is-flipped > .Front{height: 0%;}
+.card.card.is-flipped > .Back
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /*Card Back rotates on click*/
+    transform: rotateY(180deg);
+}
+
+/*While card Front if facing up,display front*/
+.card > .Front 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.card>.Back{height: 0%;}
+
+.Main{width:66vw;text-align: center;}
+
+h2{text-align: center;margin: 5vh 0 5vh 0;}
+
+/*Navbar styling-------------------------------------------*/
+.NavBar
+{
+    display:flex;
+    align-items: center;
+    top:0;
+    margin:0;
+    background-color:#EB8C73;
+    text-align: center;
+}
+
+.NavBar > .Links
+{
+    flex-grow: 4;
+    border-radius: 0.5em;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.Links > .NavItem
+{
+    flex-grow: 1; 
+    justify-content: center;
+    width:100%;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 0.5em;
+}
+.NavItem:hover
+{
+    border:0.2em solid cyan;
+    border-radius: 0.5em; 
+    transition:  0.5s;
+}
+
+.NavItem > a
+{
+    text-decoration: none;
+    color:rgb(59, 86, 147);
+    margin:0;
+}
+.NavItem > a:hover{text-decoration: underline;}
+
+/*By default make icon not display*/
+.NavBar > .Menu
+{
+    display:none;
+    cursor: pointer;
+}
+.Menu > .MenuLines
+{
+    display:block;
+    text-align: center;
+    width: 50%;
+    height: 1vw;
+    margin: 0.2em auto;
+    transition: all 0.3s;
+    background-color: white;
+}
+/*Grow main title bigger than other items in the container*/
+.NavBar > .NavItemTitle{flex-grow: 15;}
+
+footer
+{
+    background-color: cadetblue;
+    width: 100%;
+    bottom: 0;
+    text-align:center;
+    font-family: Lucida Console;
+    font-size: 1em;
+    padding: 0.5% 0 0.5%;
+}
+
+.Extra{display: none;}
+.Extra.active
+{
+    display: block;
+    border:0.2em solid brown;
+    border-radius: 0.5em;
+    padding: 1.5em;
+    margin-bottom: 0.5em;
+}
+.Button
+{
+    font-family: Garamond;
+    cursor:pointer;
+    background-color: black;
+    color:white;
+    padding: 0.25em 0 0.25em 0;
+    margin: 0.5em 0 0.5em 0;
+}
+
+/*Picture styling*/
+.CardPic{width: 75%;}
+.PageImg{width:50%;}
+
+@media screen and (max-width:540px)
+{
+    body
+    {
+        background-color: blue;
+        font-size: 1.5em;
+        line-height: 1.75em;
+    }
+    /*Delete Card/Left column*/
+    .Left-Column
+    {
+        width: 100%;
+        order:2;
+        margin:0;
+        perspective: 200em;
+    }
+    h1{font-size: 1.75em;}
+    h2{font-size: 1.25em;}
+    .card{width:90%;text-align: center;margin-bottom: 1em;}
+    .Main{width:100%;order:1; margin: 0 1.5em 0 1.5em;}
+    .footer{width: 100%;}
+
+    /*Responsive navbar*/
+    /*Responsive navbar--------------------------*/
+
+    .NavBar{position: sticky;}
+    /*Make the title of the page the majority of the navbar*/
+    .NavBar > .NavItemTitle{width:90%;order:2;}
+
+    .NavBar > .Links
+    {
+        position: fixed;
+        /*Hide links to the left*/
+        left:-100%;
+        top: 3em;
+        flex-direction:column;
+        width:30%;
+        text-align: center;
+        transition: 0.3s;
+        background-color:#EB8C73;
+    }
+    .Links.active
+    {left:1%;}
+    .Links > .NavItem{padding:0.75em 0 0.75em 0; margin: 1em 0 1em 0;}
+    h3{font-size: 1em;}
+
+    /*Display icon*/
+    .NavBar >.Menu
+    {
+        display: flex;
+        height:4em;
+        width:10%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Make 2nd bar transparent*/
+    .Menu.active .MenuLines:nth-child(2){opacity:0;}
+    /*Rotate first and last bar to create an animation*/
+    .Menu.active .MenuLines:nth-child(1){transform: translateY(290%) rotate(45deg);}
+    .Menu.active .MenuLines:nth-child(3){transform: translateY(-290%) rotate(-45deg);}
+
+    .CardPic{width: 60%;}
+}
+
+/*Tablet*/
+@media screen and (max-width: 720px) and (min-width:541px)
+{
+   body
+    {
+        background-color: red;
+        font-size: 1.25em;
+        line-height: 1.5em;
+    }
+    .Left-Column
+    {
+        width: 100%;
+        order:2;
+        margin:0;
+        perspective: 150em;
+    }
+    .card{width: 100%;}
+    .Main{width: 100%;order:1; margin: 0 1em 0 1em;}
+    .footer{width: 100%;}
+
+    /*Responsive navbar--------------------------*/
+
+    /*Make the title of the page the majority of the navbar*/
+    .NavBar{position: sticky;}
+    .NavBar > .NavItemTitle{width:90%;order:2;}
+
+    .NavBar > .Links
+    {
+        position: fixed;
+        /*Hide links to the left*/
+        left:-100%;
+        top: 3em;
+        flex-direction:column;
+        width:30%;
+        text-align: center;
+        transition: 0.3s;
+        background-color:#EB8C73;
+    }
+    .Links.active
+    {left:0.5%;}
+    .Links > .NavItem{padding:0.75em 0 0.75em 0; margin: 0.5em 0 0.5em 0;}
+
+    /*Display icon*/
+    .NavBar >.Menu
+    {
+        display: flex;
+        height:4em;
+        width:10%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Make 2nd bar transparent*/
+    .Menu.active .MenuLines:nth-child(2){opacity:0;}
+    /*Rotate first and last bar to create an animation*/
+    .Menu.active .MenuLines:nth-child(1){transform: translateY(215%) rotate(45deg);}
+    .Menu.active .MenuLines:nth-child(3){transform: translateY(-215%) rotate(-45deg);}
+
+    .CardPic{width: 60%;}
+}
+
+/*Desktop FIRST*/
+@media screen and (min-width:721px)
+{
+    body
+    {
+        background-color: green;
+        font-size: 1.15em;
+    }
+}

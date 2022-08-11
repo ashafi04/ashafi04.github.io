@@ -300,8 +300,8 @@ footer
     /*Make 2nd bar transparent*/
     .Menu.active .MenuLines:nth-child(2){opacity:0;}
     /*Rotate first and last bar to create an animation*/
-    .Menu.active .MenuLines:nth-child(1){transform: translateY(290%) rotate(45deg);}
-    .Menu.active .MenuLines:nth-child(3){transform: translateY(-290%) rotate(-45deg);}
+    .Menu.active .MenuLines:nth-child(1){transform: translateY(300%) rotate(45deg);}
+    .Menu.active .MenuLines:nth-child(3){transform: translateY(-300%) rotate(-45deg);}
 
     .CardPic{width: 40%;}
     .BasketballGame{display: none;}

@@ -153,6 +153,7 @@ footer
     padding: 0.5% 0 0.5%;
 }
 
+/*More information stlying*/
 .Extra{display: none;}
 .Extra.active
 {
@@ -168,8 +169,72 @@ footer
     cursor:pointer;
     background-color: black;
     color:white;
-    padding: 0.25em 0 0.25em 0;
+    padding: 0.1em 0 0.1em 0;
     margin: 0.5em 0 0.5em 0;
+}
+
+/*Basketball Points game*/
+.GameTitle
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6em;
+    margin: 1em 0 1em 0;
+}
+.Game
+{
+    width: 100%;
+    display:flex;
+    margin: 0.2em 0 1em 0;
+    justify-content: space-around;
+}
+.HomeScore , .AwayScore
+{
+    border: 0.2em solid brown;
+    border-radius: 0.8em;
+    padding: 1.5em;
+    text-align: center;
+    width:25%;
+}
+.A-Score, .H-Score
+{
+    margin: 1em 0 1em 0;
+}
+.NumberContainer
+{
+   background-color:cadetblue;
+   border: 0.2em solid brown;
+}
+.ButtonContainer
+{
+    display:flex;
+    justify-content: space-between;
+}
+.ButtonAdd
+{
+    cursor:pointer;
+    border: 0.15em solid brown;
+    padding : 0.5em;
+    margin:1em 0 1em 0;
+    width:20%;
+}
+.GameControl
+{
+    display: flex;
+    justify-content: space-around;
+}
+.Start , .End
+{
+    cursor: pointer;
+    border: 0.15em solid brown;
+    margin-bottom: 1em;
+    padding: 0 0.5em 0 0.5em;
+}
+.Message
+{
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*Picture styling*/
@@ -180,7 +245,6 @@ footer
 {
     body
     {
-        background-color: blue;
         font-size: 1.5em;
         line-height: 1.75em;
     }
@@ -192,7 +256,7 @@ footer
         margin:0;
         perspective: 200em;
     }
-    h1{font-size: 1.75em;}
+    h1{font-size: 1.6em;}
     h2{font-size: 1.25em;}
     .card{width:90%;text-align: center;margin-bottom: 1em;}
     .Main{width:100%;order:1; margin: 0 1.5em 0 1.5em;}
@@ -239,7 +303,8 @@ footer
     .Menu.active .MenuLines:nth-child(1){transform: translateY(290%) rotate(45deg);}
     .Menu.active .MenuLines:nth-child(3){transform: translateY(-290%) rotate(-45deg);}
 
-    .CardPic{width: 60%;}
+    .CardPic{width: 40%;}
+    .BasketballGame{display: none;}
 }
 
 /*Tablet*/
@@ -247,7 +312,6 @@ footer
 {
    body
     {
-        background-color: red;
         font-size: 1.25em;
         line-height: 1.5em;
     }
@@ -289,7 +353,7 @@ footer
     {
         display: flex;
         height:4em;
-        width:10%;
+        width:15%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -301,7 +365,9 @@ footer
     .Menu.active .MenuLines:nth-child(1){transform: translateY(215%) rotate(45deg);}
     .Menu.active .MenuLines:nth-child(3){transform: translateY(-215%) rotate(-45deg);}
 
-    .CardPic{width: 60%;}
+    .CardPic{width: 50%;}
+
+    .BasketballGame{display: none;}
 }
 
 /*Desktop FIRST*/
@@ -309,7 +375,6 @@ footer
 {
     body
     {
-        background-color: green;
         font-size: 1.15em;
     }
 }

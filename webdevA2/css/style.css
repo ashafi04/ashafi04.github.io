@@ -235,12 +235,14 @@ footer
     text-align: center;
     font-size: 1.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:1.5em;
 }
 
 /*Picture styling*/
 .CardPic{width: 75%;}
 .PageImg{width:50%;}
 
+/*Mobile*/
 @media screen and (max-width:540px)
 {
     body
@@ -283,7 +285,7 @@ footer
     }
     .Links.active
     {left:1%;}
-    .Links > .NavItem{padding:0.75em 0 0.75em 0; margin: 1em 0 1em 0;}
+    .Links > .NavItem{padding:0.5em 0 0.5em 0; margin: 0.5em 0 0.5em 0;}
     h3{font-size: 1em;}
 
     /*Display icon*/
@@ -300,8 +302,8 @@ footer
     /*Make 2nd bar transparent*/
     .Menu.active .MenuLines:nth-child(2){opacity:0;}
     /*Rotate first and last bar to create an animation*/
-    .Menu.active .MenuLines:nth-child(1){transform: translateY(300%) rotate(45deg);}
-    .Menu.active .MenuLines:nth-child(3){transform: translateY(-300%) rotate(-45deg);}
+    .Menu.active .MenuLines:nth-child(1){transform: translateY(290%) rotate(45deg);}
+    .Menu.active .MenuLines:nth-child(3){transform: translateY(-290%) rotate(-45deg);}
 
     .CardPic{width: 40%;}
     .BasketballGame{display: none;}
@@ -346,7 +348,7 @@ footer
     }
     .Links.active
     {left:0.5%;}
-    .Links > .NavItem{padding:0.75em 0 0.75em 0; margin: 0.5em 0 0.5em 0;}
+    .Links > .NavItem{padding:0.5em 0 0.5em 0; margin: 0.5em 0 0.5em 0;}
 
     /*Display icon*/
     .NavBar >.Menu
@@ -371,7 +373,7 @@ footer
 }
 
 /*Desktop FIRST*/
-@media screen and (min-width:721px)
+@media screen  and (max-width:1440px) and (min-width:721px)
 {
     body
     {
